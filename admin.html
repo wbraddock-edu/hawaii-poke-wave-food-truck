@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Admin — Poke Wave</title><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="css/style.css"></head><body>
+<header class="header"><div class="header-inner"><a href="index.html" class="logo"><svg viewBox="0 0 36 36" fill="none" width="36" height="36"><path d="M4 20c3-5 7-7 11-5s5 7 11 5" stroke="#F1948A" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>POKE WAVE</a><div class="header-actions"><button id="themeToggle" class="btn-theme" aria-label="Toggle dark mode"></button></div></div></header>
+<div id="loginSection" style="padding-top:var(--header-h);">
+<div class="admin-login"><div class="admin-login-card">
+<h2>Admin Access</h2><p style="color:var(--text-muted);">Dashboard login required.</p>
+<form id="adminLoginForm"><div class="form-group"><label for="adminPassword">Password</label><input type="password" id="adminPassword" placeholder="Enter password" required></div><p id="loginError" style="color:#e74c3c;font-size:0.85rem;margin-bottom:12px;"></p><button type="submit" class="btn-primary" style="width:100%;justify-content:center;display:flex;">Log In</button></form>
+<p style="font-size:0.8rem;color:var(--text-muted);margin-top:16px;">Demo: admin123</p>
+</div></div></div>
+<div id="dashboardSection" style="display:none;padding-top:var(--header-h);">
+<div class="admin-dash">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;flex-wrap:wrap;gap:16px;"><div><h1 style="font-family:var(--font-display);font-size:2rem;text-transform:uppercase;">Dashboard</h1><p style="color:var(--text-muted);">Poke Wave Food Truck · <span id="dashDate"></span></p></div><button onclick="document.getElementById('dashboardSection').style.display='none';document.getElementById('loginSection').style.display='block';" style="padding:10px 20px;background:var(--gray-100);border-radius:10px;color:var(--text);font-weight:700;cursor:pointer;">Log Out</button></div>
+<div class="admin-stats"><div class="stat-card"><div class="stat-val">6</div><div class="stat-label">Catering Inquiries</div></div><div class="stat-card"><div class="stat-val">42</div><div class="stat-label">Bowls Today</div></div><div class="stat-card"><div class="stat-val">3</div><div class="stat-label">New Messages</div></div><div class="stat-card"><div class="stat-val">,840</div><div class="stat-label">Revenue Today</div></div></div>
+<div style="background:var(--card-bg);border:1px solid var(--border);border-radius:20px;padding:24px;margin-bottom:24px;"><h3 style="font-weight:700;margin-bottom:20px;">Catering Inquiries</h3><div style="overflow-x:auto;"><table class="admin-table"><thead><tr><th>Name</th><th>Package</th><th>Date</th><th>Guests</th><th>Status</th></tr></thead><tbody>
+<tr><td>Rachel T.</td><td>Big Wave</td><td>Jul 12, 2025</td><td>60</td><td><span class="status-badge status-pending">Pending</span></td></tr>
+<tr><td>James P.</td><td>Tsunami</td><td>Aug 3, 2025</td><td>130</td><td><span class="status-badge status-confirmed">Confirmed</span></td></tr>
+<tr><td>Linda S.</td><td>Wave Starter</td><td>Jul 8, 2025</td><td>20</td><td><span class="status-badge status-pending">Pending</span></td></tr>
+<tr><td>Mike C.</td><td>Big Wave</td><td>Jul 20, 2025</td><td>80</td><td><span class="status-badge status-confirmed">Confirmed</span></td></tr>
+<tr><td>Sunny M.</td><td>Wave Starter</td><td>Jul 5, 2025</td><td>25</td><td><span class="status-badge status-done">Done</span></td></tr>
+<tr><td>Kim H.</td><td>Pop-Up</td><td>Jul 15, 2025</td><td>40</td><td><span class="status-badge status-pending">Pending</span></td></tr>
+</tbody></table></div></div>
+<div style="background:var(--card-bg);border:1px solid var(--border);border-radius:20px;padding:24px;"><h3 style="font-weight:700;margin-bottom:20px;">Messages</h3><div style="overflow-x:auto;"><table class="admin-table"><thead><tr><th>From</th><th>Subject</th><th>Date</th><th>Status</th></tr></thead><tbody>
+<tr><td>Tom N.</td><td>Can you do a pop-up at our office park?</td><td>Jul 1, 2025</td><td><span class="status-badge status-pending">New</span></td></tr>
+<tr><td>Lisa K.</td><td>Do you offer group discounts for 15+ daily?</td><td>Jun 30, 2025</td><td><span class="status-badge status-pending">New</span></td></tr>
+<tr><td>Aya S.</td><td>Catering for Japanese cultural event</td><td>Jun 29, 2025</td><td><span class="status-badge status-confirmed">Replied</span></td></tr>
+</tbody></table></div></div>
+</div></div>
+<script src="js/main.js"></script>
+<script>document.getElementById('dashDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});</script>
+
+  <!-- Powered by Design Holistically -->
+  <footer style="background:#111;color:#aaa;text-align:center;padding:1.5rem;font-size:0.85rem;font-family:sans-serif;">
+    <p>&copy; 2024. Powered by <a href="https://designholistically.com" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">Design Holistically</a>. All rights reserved.</p>
+  </footer>
+
+</body></html>
